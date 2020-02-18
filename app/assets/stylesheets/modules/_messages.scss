@@ -16,7 +16,7 @@
       background-color: #253141;
       display: flex;
       align-items: center;
-      
+
       .top-items {
         height: 20px;
         width: 260px;
@@ -42,6 +42,20 @@
     &__group-list {
       height: calc(100vh - 100px);
       background-color: #2f3e51;
+
+      .list-items {
+        height: 91px;
+        width: 260px;
+        margin: auto;
+        padding: 20px 0 40px;
+        &__name {
+          font-size: 15px;
+        }
+        &__message {
+          padding-top: 5px;
+          font-size: 11px;
+        }
+      }
     }
   }
   
