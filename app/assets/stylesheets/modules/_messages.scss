@@ -102,6 +102,26 @@
     &__message-list {
       height: calc(100vh - 190px);
       background-color: #fafafa;
+      margin-top: 35px;
+      padding-bottom: 46px;
+      .list-items {
+        margin-left: 40px;
+        &__name {
+          font-size: 16px;
+          color: #333;
+        }
+        &__date {
+          font-size: 12px;
+          color: #999;
+        }
+        &__message {
+          font-size: 14px;
+          color: #434a43;
+          margin-top: 12px;
+          margin-bottom: 46px;
+        }
+
+      }
     }
     &__message-form {
       height: 90px;
