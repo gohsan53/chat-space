@@ -13,7 +13,6 @@
       height: 100px;
       background-color: #253141;
       display: flex;
-      justify-content: center;
       align-items: center;
     }
     &__group-list {
@@ -24,7 +23,15 @@
   .top-items {
     height: 20px;
     width: 260px;
+    margin: auto;
     background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    &__name {
+    }
+    &__icons {
+      width: 60px;
+    }
   }
   
   .main-chat {
