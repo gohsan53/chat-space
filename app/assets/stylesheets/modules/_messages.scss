@@ -12,11 +12,19 @@
     &__user-name {
       height: 100px;
       background-color: #253141;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     &__group-list {
       height: calc(100vh - 100px);
       background-color: #2f3e51;
     }
+  }
+  .top-items {
+    height: 20px;
+    width: 260px;
+    background-color: #333;
   }
   
   .main-chat {
