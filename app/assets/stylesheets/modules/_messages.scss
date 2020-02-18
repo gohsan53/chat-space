@@ -9,6 +9,7 @@
   .side-bar {
     height: 100vh;
     width: 300px;
+    color: #fff;
     &__user-name {
       height: 100px;
       background-color: #253141;
@@ -24,13 +25,20 @@
     height: 20px;
     width: 260px;
     margin: auto;
-    background-color: #333;
     display: flex;
     justify-content: space-between;
+    line-height: 20px;
     &__name {
     }
     &__icons {
       width: 60px;
+      text-align: right;
+    }
+    &__btn {
+      color: #fff;
+      &--icon {
+        padding-left: 5px;
+      }
     }
   }
   
