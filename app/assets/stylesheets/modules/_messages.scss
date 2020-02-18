@@ -22,7 +22,19 @@
   .main-chat {
     height: 100vh;
     width: calc(100vw - 300px);
-    background-color: #fff;
     border: 1px solid #000;
+    &__group-info {
+      height: 100px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    &__message-list {
+      height: calc(100vh - 190px);
+      background-color: #fafafa;
+    }
+    &__message-form {
+      height: 90px;
+      background-color: #d2d2d2;
+    }
   }
 }
