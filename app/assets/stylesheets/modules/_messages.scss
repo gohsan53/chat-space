@@ -88,13 +88,13 @@
         width: 72px;
         margin-top: 28px;
         margin-right: 40px;
-        border: 1px solid #38aef0;
+        border: 1px solid $btnBlueColor;
         font-size: 16px;
         display: flex;
         justify-content: center;
         align-items: center;
         &__btn {
-          color: #38aef0;
+          color: $btnBlueColor;
           text-decoration: none;
         }
       }
@@ -140,7 +140,7 @@
           height: 100%;
           width: 100%;
           padding-left: 10px;
-          background-color: white;
+          background-color: #fff;
         }
         &__image {
           display: inline;
@@ -159,7 +159,7 @@
         line-height: 50px;
         margin-left: 15px;
         margin-right: 40px;
-        background-color: #38aef0;
+        background-color: $btnBlueColor;
         color: #fff;
       }
     }
