@@ -1,0 +1,42 @@
+.main-chat
+  .main-chat__group-info
+    .info-items
+      .info-items__group-name
+        group-name
+      .info-items__group-members
+        Member : username 
+    .info-edit
+      = link_to "#", class: "info-edit__btn" do
+        = "Edit"
+
+  .main-chat__message-list
+    .list-items
+      %span.list-items__name
+        name1
+      %span.list-items__date
+        2020/02/18(Tue) 19:21:00
+      .list-items__message
+        おはよう！
+    .list-items
+      %span.list-items__name
+        name2
+      %span.list-items__date
+        2020/02/18(Tue) 19:21:00
+      .list-items__message
+        おはよう！
+    .list-items
+      %span.list-items__name
+        name3
+      %span.list-items__date
+        2020/02/18(Tue) 19:21:00
+      .list-items__message
+        おはよう！
+
+  .main-chat__message-form
+    .form-items
+      %input.form-items__text{type: "text", placeholder: "type a message"}
+      %label.form-items__image
+        = icon('far', 'image')
+        %input.form-items__image--invisible{type: "file"}
+    .form-submission
+      Send
