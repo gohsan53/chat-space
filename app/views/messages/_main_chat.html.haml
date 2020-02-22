@@ -6,7 +6,7 @@
       .info-items__group-members
         Member : username 
     .info-edit
-      = link_to "#", class: "info-edit__btn" do
+      = link_to edit_group_path(current_user), class: "info-edit__btn" do
         = "Edit"
 
   .main-chat__message-list
