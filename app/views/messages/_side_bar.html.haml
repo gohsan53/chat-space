@@ -11,18 +11,10 @@
           = icon('fas', 'cog', class: "top-items__btn--icon")
 
   .side-bar__group-list
-    .list-items
-      .list-items__name
-        group-name
-      .list-items__message
-        まだメッセージはありません
-    .list-items
-      .list-items__name
-        group-name2
-      .list-items__message
-        まだメッセージはありません
-    .list-items
-      .list-items__name
-        group-name3
-      .list-items__message
-        まだメッセージはありません
+    - current_user.groups.each do |group|
+      .list-items
+        =link_to '#' do
+          .list-items__name
+            = group.name
+          .list-items__message
+            メッセージはまだありません
