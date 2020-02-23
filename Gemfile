@@ -60,3 +60,6 @@ gem 'font-awesome-sass'
 
 # Use devise
 gem 'devise'
+
+# Use pry
+gem 'pry-rails'
