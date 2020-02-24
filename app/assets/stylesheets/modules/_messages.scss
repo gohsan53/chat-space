@@ -55,6 +55,10 @@
           padding-top: 5px;
           font-size: 11px;
         }
+        a {
+          color: white;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -109,6 +113,7 @@
         margin-left: 40px;
         &__name {
           font-size: 16px;
+          font-weight: bold;
           color: #333;
         }
         &__date {
@@ -120,47 +125,54 @@
           color: #434a43;
           margin-top: 12px;
           margin-bottom: 46px;
+          &__image {
+            display: block;
+            margin-top: 10px;
+          }
         }
       }
     }
     &__message-form {
       height: 90px;
       background-color: #d2d2d2;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 20px 40px;
       
-      .form-items {
-        height: 50px;
-        width: calc(100% - 149px);
-        padding-left: 40px;
-        line-height: 50px;
-        position: relative;
-        &__text {
-          height: 100%;
+      .form {
+        display: flex;
+        &__items {
+          display: flex;
           width: 100%;
-          padding-left: 10px;
-          background-color: #fff;
-        }
-        &__image {
-          display: inline;
-          position: absolute;
-          right: 0;
-          margin-right: 10px;
-          &--invisible {
-            display: none;
+          position: relative;
+          &__text {
+            height: 50px;
+            width: 100%;
+            color: #434a54;
+            border-style: none;
+            padding: 0 40px 0 10px;
+          }
+          &__label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            &__image {
+              cursor: pointer;
+              font-size: 24px;
+              &--invisible {
+                display: none;
+              }
+            }
           }
         }
-      }
-      .form-submission {
-        height: 50px;
-        width: 94px;
-        text-align: center;
-        line-height: 50px;
-        margin-left: 15px;
-        margin-right: 40px;
-        background-color: $btnBlueColor;
-        color: #fff;
+
+        &__submit-btn {
+          height: 50px;
+          width: 100px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: $btnBlueColor;
+          color: #fff;
+          cursor: pointer;
+        }
       }
     }
   }

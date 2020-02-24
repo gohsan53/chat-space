@@ -2,41 +2,24 @@
   .main-chat__group-info
     .info-items
       .info-items__group-name
-        group-name
+        = @group.name
       .info-items__group-members
-        Member : username 
+        Member : 
+        - @group.users.each do |user|
+          = user.name
     .info-edit
-      = link_to edit_group_path(current_user), class: "info-edit__btn" do
+      = link_to edit_group_path(@group.id), class: "info-edit__btn" do
         = "Edit"
 
   .main-chat__message-list
-    .list-items
-      %span.list-items__name
-        name1
-      %span.list-items__date
-        2020/02/18(Tue) 19:21:00
-      .list-items__message
-        おはよう！
-    .list-items
-      %span.list-items__name
-        name2
-      %span.list-items__date
-        2020/02/18(Tue) 19:21:00
-      .list-items__message
-        おはよう！
-    .list-items
-      %span.list-items__name
-        name3
-      %span.list-items__date
-        2020/02/18(Tue) 19:21:00
-      .list-items__message
-        おはよう！
+    = render @messages
 
   .main-chat__message-form
-    .form-items
-      %input.form-items__text{type: "text", placeholder: "type a message"}
-      %label.form-items__image
-        = icon('far', 'image')
-        %input.form-items__image--invisible{type: "file"}
-    .form-submission
-      Send
+    = form_for [@group, @message], html: { class: 'form' } do |f|
+      .form__items
+        = f.text_field :text, class: 'form__items__text', placeholder: 'type a message'
+        .form__items__label
+          = f.label :image, class: 'form__items__label__image' do
+            = icon('far', 'image', class: 'form__items__label__image--visible')
+            = f.file_field :image, class: 'form__items__label__image--invisible'
+      = f.submit 'Send', class: 'form__submit-btn'

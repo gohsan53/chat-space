@@ -63,3 +63,6 @@ gem 'devise'
 
 # Use pry
 gem 'pry-rails'
+
+# Use CarrierWave
+gem 'carrierwave', '~> 2.0'
