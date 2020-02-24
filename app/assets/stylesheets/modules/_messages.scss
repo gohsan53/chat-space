@@ -109,6 +109,7 @@
         margin-left: 40px;
         &__name {
           font-size: 16px;
+          font-weight: bold;
           color: #333;
         }
         &__date {
@@ -120,6 +121,10 @@
           color: #434a43;
           margin-top: 12px;
           margin-bottom: 46px;
+          &__image {
+            display: block;
+            margin-top: 10px;
+          }
         }
       }
     }
