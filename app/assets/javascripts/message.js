@@ -48,10 +48,12 @@ $(function () {
         $('.main-chat__message-list').append(html);
         $('.main-chat__message-list').animate({ scrollTop: $('.main-chat__message-list')[0].scrollHeight});
         $('form')[0].reset();
-        $('.form__submit').removeAttr('disabled');
       })
       .fail(function() {
         alert('メッセージを送信できませんでした');
-      });
+      })
+      .always(function() {
+        $('.form__submit-btn').removeAttr('disabled');
+      })
   });
 });
