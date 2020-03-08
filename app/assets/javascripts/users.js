@@ -3,7 +3,7 @@ $(function () {
     let html = `
       <div class='chat-group-user clearfix'>
         <p class='chat-group-user__name'>${user.name}</p>
-        <div class='user-search-add chat-group__btn chat-group-user__btn--add' data-user-id='${user.id}' data-user-name}'>追加</div>
+        <div class='user-search-add chat-group-user__btn chat-group-user__btn--add' data-user-id='${user.id}' data-user-name}'>追加</div>
       </div>
     `;
     $('#user-search-result').append(html);
@@ -43,4 +43,7 @@ $(function () {
         alert('通信エラーです．ユーザーが表示できません．');
       });
   });
+  $('.chat-group-form__search').on('click', '.chat-group-user__btn--add', function() {
+    console.log;
+  })
 });
