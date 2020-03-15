@@ -45,6 +45,8 @@ set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/chatspace53.pem']
 
 # PID file location
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
+# Unicorn config file location
+set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 
 # Restart Unicorn after deploy
