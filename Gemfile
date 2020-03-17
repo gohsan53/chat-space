@@ -63,6 +63,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+# Use fog-aws
+gem 'carrierwave'
+gem 'fog-aws'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -77,6 +81,3 @@ gem 'devise'
 
 # Use pry
 gem 'pry-rails'
-
-# Use CarrierWave
-gem 'carrierwave', '~> 2.0'
