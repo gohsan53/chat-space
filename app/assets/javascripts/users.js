@@ -42,11 +42,16 @@ $(function () {
     })
       .done(function (users) {
         $('#user-search-result').empty();
-
+        let addUserNum = 0;
         if (users.length !== 0) {
           users.forEach(function (user) {
-            addUser(user);
-          });
+            let idNum = document.getElementById(user.id);
+            if (user.id && !idNum) {
+              addUser(user);
+              addUserNum++;
+            }
+          })
+          if(addUserNum == 0) addNoUser();
         } else if (input.length == 0) {
           return false;
         } else {
